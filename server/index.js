@@ -46,7 +46,6 @@ app.get('/api/values/all', async (req, res) => {
 });
 
 app.get('/api/values/current', async (req, res) => {
-  redisClient.del('values')
   redisClient.hgetall('values', (err, values) => {
     res.send(values);
   });
