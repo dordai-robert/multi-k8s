@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import OtherPage from './OtherPage';
@@ -11,10 +10,11 @@ class App extends Component {
       <Router>
         <div className="App">
           <header className="App-header">
-            <img src={logo} className="App-logo" alt="logo" />
-            <h1 className="App-title">Fib Calculator version KUBERNETES!</h1>
-            <Link to="/">Home</Link>
-            <Link to="/otherpage">Other Page</Link>
+            <p1><b>Fibonacci calculator</b></p1>
+            <p>react - node - postgres - redis - travis - docker - kubernetes - google GKE</p>
+            <p> containers for: client, server, redis, postgres, worker(subscribed on redis, makes the fibonacci computing)</p>
+            <p><Link to="/"><b>Home</b></Link></p>
+            <p><Link to="/otherpage"><b>Other Page</b></Link></p>
           </header>
           <div>
             <Route exact path="/" component={Fib} />
