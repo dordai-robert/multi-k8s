@@ -10,9 +10,8 @@ class App extends Component {
       <Router>
         <div className="App">
           <header className="App-header">
-            <p1><b>Fibonacci calculator</b></p1>
-            <p>react - node - postgres - redis - travis - docker - kubernetes - google GKE</p>
-            <p> containers for: client, server, redis, postgres, worker(subscribed on redis, makes the fibonacci computing)</p>
+            <p>Fibonacci calculator deployed on <b>Google GKE</b></p>
+            <p>react - node - postgres - redis - travis - docker - kubernetes - google kubernetes engine</p>
             <p><Link to="/"><b>Home</b></Link></p>
             <p><Link to="/otherpage"><b>Other Page</b></Link></p>
           </header>

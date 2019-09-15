@@ -40,6 +40,7 @@ app.get('/api/', (req, res) => {
 });
 
 app.get('/api/values/all', async (req, res) => {
+  await pgClient.query('DELETE from values');
   const values = await pgClient.query('SELECT * from values');
 
   res.send(values.rows);
