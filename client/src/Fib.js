@@ -35,10 +35,16 @@ class Fib extends Component {
   };
 
   renderSeenIndexes() {
-    if (!Array.isArray(this.state.stateIndexes)) {
-      this.state.stateIndexes = []
+    if (!Array.isArray(this.state.seenIndexes)) {
+      console.log('INSIDE IF');
+      console.log(this.state.seenIndexes);
+      this.state.seenIndexes = []
     }
-    return this.state.seenIndexes.map(({ number }) => number).join(', ');
+    console.log('OUTSIDE IF');
+    console.log(this.state.seenIndexes);
+    if (Array.isArray(this.state.seenIndexes)) {
+      return this.state.seenIndexes.map(({ number }) => number).join(', ');
+    } else return []
   }
 
   renderValues() {
